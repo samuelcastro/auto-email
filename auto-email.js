@@ -10,6 +10,8 @@
 
       // check for autocomplete after each key
       $this.keypress(function(e) {
+        $this.trigger('change'); // making sure change event will be trigged.
+        
         var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
 
         // FireFox needs you to watch for action keys (arrows, tab, etc.)
