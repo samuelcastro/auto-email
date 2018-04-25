@@ -7,10 +7,6 @@
       var $this = $(this);
       var len;
       var domain = domains[0];
-
-      $this.change(function(e) {
-        $this.trigger('onChange', e); // making sure change event will be trigged.
-      });
       
       // check for autocomplete after each key
       $this.keypress(function(e) { 
