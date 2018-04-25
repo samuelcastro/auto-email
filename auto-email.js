@@ -8,10 +8,12 @@
       var len;
       var domain = domains[0];
 
+      $this.change(function(e) {
+        $this.trigger('onChange', e); // making sure change event will be trigged.
+      });
+      
       // check for autocomplete after each key
-      $this.keypress(function(e) {
-        $this.trigger('change'); // making sure change event will be trigged.
-        
+      $this.keypress(function(e) { 
         var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
 
         // FireFox needs you to watch for action keys (arrows, tab, etc.)
